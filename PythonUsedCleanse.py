@@ -27,6 +27,8 @@ def clean_text(text):
     clean = clean.apply(lambda r: re.sub(reg, string=r, repl='#'))
     reg = re.compile('https?\S+(?=\s|$)')
     clean = clean.apply(lambda r: re.sub(reg, string=r, repl='url'))
+    reg = re.compile('[0-9\_]+')
+    clean = clean.apply(lambda r: re.sub(reg, string=r, repl='0'))
     clean = clean.replace(r'[^\x00-\x7F]+', '', regex=True)
     return clean.apply(lambda x: ' '.join(re.sub("(#[A-Za-z0-9]+)|(/[A-Za-z0-9]+)|(@[A-Za-z0-9]+)|(www.[A-Za-z0-9]+)|([^0-9A-Za-z \t])|(\w+:\/\/\S+)|(/+:\/\/\S+)"," ",x).split()))
 
