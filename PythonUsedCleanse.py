@@ -22,11 +22,11 @@ def clean_text(text):
     reg = re.compile('\\n')
     clean = clean.apply(lambda r: re.sub(reg, string=r, repl=' '))
     reg = re.compile('@[a-zA-Z0-9\_]+')
-    clean = clean.apply(lambda r: re.sub(reg, string=r, repl='@'))
+    clean = clean.apply(lambda r: re.sub(reg, string=r, repl='username'))
     reg = re.compile('#[a-zA-Z0-9\_]+')
     clean = clean.apply(lambda r: re.sub(reg, string=r, repl='#'))
     reg = re.compile('https?\S+(?=\s|$)')
-    clean = clean.apply(lambda r: re.sub(reg, string=r, repl='www'))
+    clean = clean.apply(lambda r: re.sub(reg, string=r, repl='url'))
     clean = clean.replace(r'[^\x00-\x7F]+', '', regex=True)
     return clean.apply(lambda x: ' '.join(re.sub("(#[A-Za-z0-9]+)|(/[A-Za-z0-9]+)|(@[A-Za-z0-9]+)|(www.[A-Za-z0-9]+)|([^0-9A-Za-z \t])|(\w+:\/\/\S+)|(/+:\/\/\S+)"," ",x).split()))
 
