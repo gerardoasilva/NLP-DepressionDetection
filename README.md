@@ -26,7 +26,11 @@ Para correr el proyecto en Google Colab se debe cargar los dos Notebooks con tod
 
 ## Funcionalidad
 
-Pendiente
+El proyecto está dividido en dos partes fundamentales: 
+
+* La primera consiste en generar una base de datos multimodal que no solo tenga los textos, sino también las imágenes de las publicaciones que hacen los usuarios de alguna red social. En este caso, se eligió Instagram como la fuente de los datos. Sin embargo, esta plataforma no cuenta con una API, por lo que se implementaron técnicas de Web Scraping utilizando la herramienta Selenium para así poder generar la base de datos.
+
+* La segunda parte consiste en llevar a cabo un Early-Fusion de los datos de tal manera que, previo a ser clasificados, se combinan los vectores de embedding de los textos con los vectores de features de sus respectivas imágenes, generando un nuevo bloque de fusión listo para ser procesado por nuestro modelo clasificador implementado con la API de Keras.
 
 ## Poster Académico
 
@@ -35,4 +39,3 @@ Pendiente
 
 ## Notas
 
-Pendiente
