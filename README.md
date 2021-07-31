@@ -39,6 +39,7 @@ Pendiente
 
 ## Notas
 
+Respecto a la recolección y limpieza de datos...
 * Para este proyecto se decidió usar instagram mediante técnicas de web-scraping para formar el set de datos multimodal. Se tuvo en consideración tanto Reddit como Twitter, pero no se encontraron fuentes adecuadas para la recolección de datos.
 Aún cuando instagram es una plataforma que a simple vista ofrece un ambiente perfecto para la recolección de datos multimodal, se tuvieron bastantes problemas respecto a la recolección de datos.
 * La forma en la que desarrollamos nuestro sistema de web-scraping consiste en iterar sobre diferentes publicaciones sobre un hashtag en específico y de ahí guarda la imagen y su respectiva caption o encabezado. Aquí entró un problema sobre qué hacer con las publicaciones que no eran imágenes, así como videos y reels, esto se pudo solucionar sin mucho problema, simplemente ignoramos todo lo que no era una foto.
